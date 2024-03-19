@@ -1,0 +1,67 @@
+:root{
+    --cuboSite: 100px;
+}
+
+.cubo{
+    position: fixed;
+    width: var(--cuboSite);
+    height: var(--cuboSite);
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    animation: rotate 4s infinite;
+    transform-style: preserve-3d; /* Define que os elementos filhos serão transformados em 3D */
+}
+
+@keyframes rotate {
+    from {
+      transform: rotateY(0deg) rotateX(0deg);
+    }
+    to {
+      transform: rotateY(360deg) rotateX(360deg);
+    }
+}
+
+.escuro{
+    filter: brightness(5%);
+}
+
+.lados {
+    position: absolute;
+    width: var(--cuboSite);
+    height: var(--cuboSite);
+    background-image: url("../assets/cubo/26058473-nao-resolvido-rubik-cubo-frente-visao-em-branco-vetor.jpg");
+    background-size: 150%;
+    background-position: center;
+    border: 1px solid black;
+}
+/* 6 Lados cubo */
+.frente {
+    transform: translateZ(calc(var(--cuboSite) / 2));
+}
+
+.costas {
+    transform: translateZ(calc(var(--cuboSite) / 2 * -1)) rotateY(180deg);
+}
+
+.cima {
+    transform: rotateX(90deg) translateZ(calc(var(--cuboSite) / 2));
+}
+
+.baixo {
+    transform: rotateX(-90deg) translateZ(calc(var(--cuboSite) / 2));
+}
+
+.esquerda {
+    transform: rotateY(-90deg) translateZ(calc(var(--cuboSite) / 2));
+}
+
+.direita {
+    transform: rotateY(90deg) translateZ(calc(var(--cuboSite) / 2));
+}
+
+@media screen and (min-width: 1068px) {
+    :root{
+        --cuboSite: 200px;
+    }
+}

@@ -1,0 +1,13 @@
+#homeScreen{
+    background-image: url("../assets/home/3f74e69b00a2ce56df4d4d04096de395.jpg");
+    background-size: cover;
+}
+
+#gameScreen{
+    background-image: url("../assets/cenarios/1.png");
+    background-size: cover;
+}
+
+#diaScreen{
+    text-shadow: chartreuse;
+}

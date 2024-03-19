@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" type="imagex/png" href="./assets/home/2589413.png">
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/cubo.css">
+    <link rel="stylesheet" href="./styles/lanterna.css">
+    <title>Cubic</title>
+</head>
+<body>
+    <main class="select-none">
+        <article>
+            <section class="min-h-screen flex items-center justify-around text-white text-xl font-semibold" id="homeScreen">
+                <div>
+                    <div class="backgroundMusic">
+                        <audio loop src="./sounds/Horror-Game-Intro.mp3"></audio>
+                        <audio loop src="./sounds/Surreal-Game-Menu_Looping.mp3"></audio>
+                    </div>
+                    <audio src="./sounds/mixkit-pen-click-and-release-1115.wav" id="lanternaSound"></audio>
+                    <audio src="./sounds/angry-beast-6172.mp3" id="rugidoSound"></audio>
+                    <audio src="./sounds/endGame.mp3" id="endSound"></audio>
+                    <h1 class="text-3xl">Cubic</h1>
+                    <div>
+                        <button class="hover:underline" onclick="novoJogo()">new game</button>
+                    </div>
+                    <div>
+                        <button class="hover:underline" onclick="comecarJogo()">continue</button>
+                    </div>
+                </div>
+                <div></div>
+            </section>
+            <section class="min-h-screen hidden text-white text-xl font-semibold" id="gameScreen">
+                <div class="w-full h-full fixed lanternaDesligada" id="lanterna"></div>
+                <div class="w-1/2 h-full left-1/2 transform -translate-x-1/2 fixed" id="toqueLanterna"></div>
+                <div class="fixed top-10 right-10">
+                    <p><a id="horas">12</a> am</p>
+                    <p>night <a id="dia">1</a></p>
+                </div>
+                <div class="fixed bottom-10 left-10">
+                    <p>lucidez</p>
+                    <div class="w-32 h-5 bg-gray-200">
+                        <div class="w-full h-5 bg-orange-700" id="lucidez"></div>
+                    </div>
+                    <p>energia</p>
+                    <div class="w-32 h-5 bg-gray-200">
+                        <div class="w-full h-5 bg-green-700" id="energia"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="w-2/12 h-full fixed left-10 top-0" onTouchstart="mudarMapa(-1)"></div>
+                </div>
+                <div>
+                    <div class="w-2/12 h-full fixed right-10 top-0" onTouchstart="mudarMapa(1)"></div>
+                </div>
+                <div class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden" id="pause">
+                    <h2 class="text-center">pause</h2>
+                </div>
+            </section>
+            <section class="h-screen flex items-center justify-center hidden text-xl text-white bg-black" id="diaScreen">
+                <h2>dia <a id="diaItem">2</a></h2>
+            </section>
+        </article>
+    </main>
+    <script src="./index.js"></script>
+</body>
+</html>

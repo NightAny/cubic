@@ -1,0 +1,7 @@
+.lanternaLigada{
+    background: radial-gradient(circle, #f3ff4b27, #000000e1, #000000);
+}
+
+.lanternaDesligada{
+    background: radial-gradient(circle, #000000d0, #000000e1, #000000);
+}
